@@ -1,0 +1,11 @@
+.logo > span {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+span.food {
+  color: #404040;
+}
+span.bag {
+  color: #ad4c4c;
+}
