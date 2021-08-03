@@ -1,3 +1,4 @@
+/* hero session */
 .hero-session {
   height: 30vh;
   display: flex;
@@ -17,8 +18,24 @@
 
 .hero-session-content > p {
   color: #606060;
-
   font-size: 1.6rem;
   line-height: 2rem;
   font-weight: 400;
+}
+/* location */
+.location-search > p {
+  font-size: 1.6rem;
+  color: #404040;
+  line-height: 2rem;
+  font-weight: 600;
+  margin: 70px 0 20px 0;
+}
+
+/* pick-interest */
+.pick-interest-details > p {
+  font-size: 1.6rem;
+  color: #404040;
+  line-height: 2rem;
+  font-weight: 600;
+  margin: 70px 0 20px 0;
 }
