@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import LocationInput from "./../../Components/locationInput/LocationInput";
 
 const HeroSession = () => {
   return (
@@ -12,6 +13,7 @@ const HeroSession = () => {
       </div>
       <div className="location-search">
         <p>Where are you?</p>
+        <LocationInput />
       </div>
     </>
   );
