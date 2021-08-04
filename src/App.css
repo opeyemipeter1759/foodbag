@@ -19,3 +19,10 @@ body {
   width: 90%;
   margin: 2rem auto;
 }
+
+@media only screen and (max-width: 768px) {
+  body {
+    width: 90%;
+    padding: 2rem auto;
+  }
+}

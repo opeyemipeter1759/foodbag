@@ -35,3 +35,19 @@
   line-height: 1.6rem;
   margin-top: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+  .pick-interest {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    border: 2px solid #f0f0f0;
+    height: 170px;
+    width: 100%;
+
+    -webkit-box-shadow: 0 10px 6px -10px #ccc;
+    -moz-box-shadow: 0 10px 6px -10px #ccc;
+    box-shadow: 0 10px 6px -13px #ccc;
+    margin-bottom: 20px;
+  }
+}
