@@ -1,12 +1,13 @@
 import React from "react";
+import DefaultLayout from "../../DefaultLayoout/DefaultLayout";
 import HeroSession from "./HeroSession";
 import "./Home.css";
 
 const Home = () => {
   return (
-    <div className="homePage">
+    <DefaultLayout>
       <HeroSession />
-    </div>
+    </DefaultLayout>
   );
 };
 
