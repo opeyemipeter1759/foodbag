@@ -1,0 +1,70 @@
+.Vendor-food {
+  display: flex;
+  justify-content: space-between;
+}
+.Vendor > h1 {
+  margin-top: 5rem;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: left;
+}
+.kfc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kfc-header > div {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.kfc-header > div > img {
+}
+.kfc-header > div > span {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-left: 2rem;
+}
+.view-all {
+  color: #ad4c4c;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 1rem;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 768px) {
+  .Vendor > h1 {
+    margin-top: 4rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+  }
+  .kfc-header > div > img {
+    width: 40%;
+  }
+  .kfc-header > div > span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 1rem;
+  }
+  .Vendor-food {
+    flex-direction: column;
+  }
+  .view-all {
+    display: none;
+  }
+  .view-all-mobile {
+    display: block;
+    text-align: center;
+    color: #ad4c4c;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 1rem;
+    text-transform: capitalize;
+    margin-bottom: 4rem;
+  }
+}

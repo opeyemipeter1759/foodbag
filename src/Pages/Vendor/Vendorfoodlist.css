@@ -1,0 +1,93 @@
+.foodlist {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+.food-card {
+  height: 170px;
+  width: 200px;
+}
+.food-card > img {
+  width: 250px;
+}
+
+.foodcard-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.foodcard-details > h3 {
+  font-size: 1.6rem;
+  color: #666666;
+  margin-top: 10px;
+  font-weight: 600;
+  line-height: 2.1rem;
+}
+.foodcard-details > p {
+  color: #7cb433;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  font-weight: 600;
+}
+
+.addtocard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 43px;
+  width: 13.5rem;
+
+  border-radius: 4px;
+  background-color: #fff;
+  color: #ad4c4c;
+  border: 0.15rem solid #ad4c4c;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.remove {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 43px;
+  width: 13.5rem;
+  border-radius: 4px;
+  background-color: #a5a5a5;
+  color: #e6e6e6;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: none;
+}
+.remove > i {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .foodlist {
+    width: 100%;
+  }
+  .food-card {
+    width: 100%;
+  }
+
+  .food-card > img {
+    width: 100%;
+  }
+  .foodcard-details {
+    margin-top: 2.5rem;
+  }
+  .add-remove {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}
