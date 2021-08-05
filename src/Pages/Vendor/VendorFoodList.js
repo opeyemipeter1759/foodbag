@@ -1,32 +1,36 @@
 import React from "react";
 import "./Vendorfoodlist.css";
-
-const VendorFoodList = ({
-  foodImg,
-  foodName,
-  foodPrice,
+import {
+  loadCurrentItem,
   addToCart,
-  remove,
-}) => {
+} from "../../../redux/Shopping/shopping-actions";
+
+const VendorFoodList = ({ product }) => {
   return (
     <div className="foodlist">
       <div className="food-card">
-        <img src={foodImg} alt="foodlist" />
+        <img src={product.image} alt="foodlist" />
       </div>
       <div className="foodcard-details">
-        <h3>{foodName}</h3>
-        <p> #{foodPrice}</p>
+        <h3>{product.title}</h3>
+        <p> #{product.price}</p>
       </div>
 
       <div className="add-remove">
-        <button className="addtocard">{addToCart}</button>
+        <button className="addtocard">{product.addToCart}</button>
         <button className="remove">
           <i class="fas fa-minus-circle"></i>
-          {remove}
+          {product.remove}
         </button>
       </div>
     </div>
   );
+};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (id) => dispatch(addToCart(id)),
+    loadCurrentItem: (item) => dispatch(loadCurrentItem(item)),
+  };
 };
 
 export default VendorFoodList;

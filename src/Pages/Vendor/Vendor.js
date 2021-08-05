@@ -9,8 +9,9 @@ import CRf3 from "./../../Assets/Images/food3.svg";
 
 import kfcfood from "./../../Assets/Images/kfcfood.svg";
 import VendorFoodList from "./VendorFoodList";
+import { connect } from "react-redux";
 
-const Vendor = () => {
+const Vendor = ({ products }) => {
   return (
     <>
       <DefaultLayout>
@@ -29,34 +30,9 @@ const Vendor = () => {
               </div>
             </div>
             <div div className="Vendor-food">
-              <VendorFoodList
-                foodImg={kfcfood}
-                foodName="KFC King Bucket"
-                foodPrice="5000"
-                addToCart="Add to Cart"
-                remove="Remove"
-              />
-              <VendorFoodList
-                foodImg={kfcfood}
-                foodName="Zinger Burger"
-                foodPrice="3600"
-                addToCart="Add to Cart"
-                remove="Remove"
-              />{" "}
-              <VendorFoodList
-                foodImg={kfcfood}
-                foodName="Chicken Stripes"
-                foodPrice="1450"
-                addToCart="Add to Cart"
-                remove="Remove"
-              />{" "}
-              <VendorFoodList
-                foodImg={kfcfood}
-                foodName="Yamilicious"
-                foodPrice="900"
-                addToCart="Add to Cart"
-                remove="Remove"
-              />
+              {products.map((product) => (
+                <VendorFoodList key={product.id} foodData={product} />
+              ))}
             </div>
           </div>
           <p className="view-all-mobile">View all</p>
@@ -75,34 +51,10 @@ const Vendor = () => {
               </div>
             </div>
             <div div className="Vendor-food">
-              <VendorFoodList
-                foodImg={CRf1}
-                foodName="Refuel Max"
-                foodPrice="1200"
-                addToCart="Add to Cart"
-                remove="Remove"
-              />
-              <VendorFoodList
-                foodImg={CRf2}
-                foodName="Express meal"
-                foodPrice="2000"
-                addToCart="Add to Cart"
-                remove="Remove"
-              />{" "}
-              <VendorFoodList
-                foodImg={CRf3}
-                foodName="Citizen meal"
-                foodPrice="1500"
-                addToCart="Add to Cart"
-                remove="Remove"
-              />{" "}
-              <VendorFoodList
-                foodImg={CRf3}
-                foodName="Chruncy wings"
-                foodPrice="1750"
-                addToCart="Add to Cart"
-                remove="Remove"
-              />
+              <VendorFoodList />
+              <VendorFoodList />
+              <VendorFoodList />
+              <VendorFoodList />
             </div>
           </div>
           <p className="view-all-mobile">View all</p>
@@ -114,4 +66,10 @@ const Vendor = () => {
   );
 };
 
-export default Vendor;
+const mapStateToProps = (state) => {
+  return {
+    products: state.shop.products,
+    chickenRep: state.shop.ChickenRepublic,
+  };
+};
+export default connect(mapStateToProps)(Vendor);
